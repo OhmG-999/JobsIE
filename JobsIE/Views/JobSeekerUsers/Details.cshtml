@@ -1,0 +1,66 @@
+﻿@model JobsIE.Models.JobSeekerUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JobSeekerUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobSeekerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobSeekerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobSeekerPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobSeekerPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobSeekerDoB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobSeekerDoB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastLoginDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastLoginDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobSeekerExpertise)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobSeekerExpertise)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CVFiles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CVFiles)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.JobSeekerUserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

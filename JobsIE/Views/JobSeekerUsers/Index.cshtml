@@ -1,0 +1,63 @@
+﻿@model IEnumerable<JobsIE.Models.JobSeekerUser>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JobSeekerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobSeekerPhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobSeekerDoB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastLoginDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobSeekerExpertise)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CVFiles)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobSeekerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobSeekerPhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobSeekerDoB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastLoginDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobSeekerExpertise)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CVFiles)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.JobSeekerUserID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.JobSeekerUserID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.JobSeekerUserID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,50 @@
+﻿@model JobsIE.Models.CVFile
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CVFile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobSeekerUser.JobSeekerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobSeekerUser.JobSeekerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Filename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Filename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileLastUpdated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileLastUpdated)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.JobSeekerUserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
